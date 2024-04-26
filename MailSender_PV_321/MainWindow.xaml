@@ -1,0 +1,36 @@
+﻿<Window x:Class="MailSender_PV_321.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailSender_PV_321"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="2" FontSize="15">List of attached files</Label>
+        <Label Grid.Row="1" FontWeight="Bold"> To Whom:</Label>
+        <TextBox x:Name="toObj" Margin="5" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center"></TextBox>
+        <Label Grid.Row="2" FontWeight="Bold"> Theme:</Label>
+        <TextBox x:Name="themeObj" Margin="5"  Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center">SMTP client in C#</TextBox>
+        <Label Grid.Row="3" FontWeight="Bold"> From whom:</Label>
+        <TextBox x:Name="fromObj" Margin="5"  Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center">dashakonopelko@gmail.com</TextBox>
+        <ListBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="4" Margin="5"></ListBox>
+        <Button Grid.Row="4" Grid.Column="1" Width="100" FontWeight="Bold" Background="#FF157B7B" Foreground="White" Margin="5">Attach file</Button>
+        <TextBox x:Name="bodyObj" Grid.Row="5" Grid.ColumnSpan="2" Padding="5" Margin="10"></TextBox>
+        <Button Click="SendButton_Click" Grid.Row="6" Grid.ColumnSpan="3" Width="100" FontWeight="Bold" Background="#FF157B7B" Foreground="White" Margin="5">Send</Button>
+    </Grid>
+</Window>
